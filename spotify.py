@@ -17,13 +17,6 @@ class Song:
         self.title = title
         self.year = year
         self.song_hotness = song_hotness
-              
-    def __str__(self):
-        title_str = f"More About \"{self.title.capitalize()}\""
-        duration = self.duration
-        return (title_str + "\n" + 
-               "This song, by " + self.artist_name + ", was made in " + self.year + " and came on the album " + self.album_name  + ".\n"
-               "For some muscial information about it, the song has a tempo of " + self.tempo + " and a duration of {:.2f}.".format(duration))
         
 def read_song_data():
     song_objects = []
