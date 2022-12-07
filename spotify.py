@@ -17,12 +17,19 @@ class Song:
         self.year = year
         self.song_hotness = song_hotness
         
+    '''
+    The following function is a string magic method that allows the info about a song to be neatly printed for the user to see
+    Returns a string and is run on an instance of the Song class
+    '''
     def __str__(self):
+        # Creates a title string to use in the return line
         title_str = f"More About \"{self.title.capitalize()}\""
+        # Allows duration to be formatted within return line
         duration = float(self.duration)
+        # Returns the string that the user can print; rounds duraiton to two decimal points
         return (title_str + "\n" + 
                "This song, by " + self.artist_name + ", was made in " + self.year + " and came on the album " + self.album_name  + ".\n"
-               "For some muscial information about it, the song has a tempo of " + self.tempo + " and a duration of {:.2f}.".format(duration))
+               "For some muscial information about it, the song has a tempo of " + self.tempo + " bpm and a duration of {:.2f}.".format(duration) + " seconds.")
     
     def to_list(self):
         return [self.album_name, self.artist_name, self.duration, self.key_signature, self.tempo, self.time_signature, self.title, self.year, self.song_hotness]
