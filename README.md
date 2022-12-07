@@ -32,9 +32,11 @@ We imported from spotify.py to get the read_song_data() and top_hundred_song() f
 We created the function top_hundred_song() which sorted the top songs by "SongHotness," with 1 being the highest and 0 being the lowest. The function writes into a new csv file called spotifytophundred.csv and prints out the top 100 songs by that measurement. Here are some screenshots to depict it:
 
 To show that it was accurately printed in ascending order, here are the top ten songs in spotifytophundred.csv:
+
 <img width="718" alt="image" src="https://user-images.githubusercontent.com/114253265/206319882-c7ccf59b-6ccd-48dc-bd4c-12820a408b49.png">
 
 And here are the last ten songs:
+
 <img width="717" alt="image" src="https://user-images.githubusercontent.com/114253265/206319981-02708660-2df4-45f5-9a25-f9742c848c62.png">
 
 Thus, confirming that the top_hundred_song() function works as it should.
