@@ -58,7 +58,7 @@ def top_hundred_song():
     try:
         with open('spotifytophundred.csv', 'w') as file:
             top_hundred_data = csv.writer(file)
-            top_hundred_data.writerow(['AlbumName', 'ArtistName', 'Duration', 'KeySignature', 'Tempo', 'TimeSignature', 'Title Year', 'SongHotness'])
+            top_hundred_data.writerow(['AlbumName', 'ArtistName', 'Duration', 'KeySignature', 'Tempo', 'TimeSignature', 'Title', 'Year', 'SongHotness'])
             
             for x in range(100):
 
