@@ -48,7 +48,7 @@ Thus, confirming that the top_hundred_song() function works as it should.
 2. The function top_hundred_song() sorts the top 100 songs from the whole dataset by measuring "SongHotness," with 1 being the highest and 0 as the lowest. Because the "SongHotness" data column had a lot of blank spaces or 0.0's, this is a potential bias that skews the top one hundred songs, in that some of the songs with blank spaces could have been in the top one hundred, or the 0.0's could have potentially been a mistake and also a part of the top one hundred songs. 
 
 ### References and acknowledgement.
-Data Visualization: https://github.com/lindseymardona/msd-exploration/blob/main/data_visuals_class.py
+Data Visualization: https://github.com/lindseymardona/msd-exploration/blob/main/data_visuals_class.py \
 Cleaned Data: https://github.com/lindseymardona/msd-exploration/blob/main/msd_cleaned.csv
 
 ### Background and source of the dataset
