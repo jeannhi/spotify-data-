@@ -5,7 +5,10 @@ import csv
 
 spotify = pd.read_csv("msd_cleaned.csv")
 
-class Song: 
+class Song:
+    ```
+    Reads in data from the dataset that allows for data manipulation for future functions.
+    ```
     def __init__(self, album_name, artist_name, duration, key_signature, tempo, time_signature, title, year, song_hotness): 
         self.album_name = album_name
         self.artist_name = artist_name
@@ -32,9 +35,25 @@ class Song:
                "For some muscial information about it, the song has a tempo of " + self.tempo + " bpm and a duration of {:.2f}.".format(duration) + " seconds.")
     
     def to_list(self):
+        ``` 
+        This function returns instances of the Song class as a list
+        
+        Args:
+            self: instances in the class Song
+        Returns: 
+            A list of instances in the class Song as a list      
+        ```
         return [self.album_name, self.artist_name, self.duration, self.key_signature, self.tempo, self.time_signature, self.title, self.year, self.song_hotness]
     
 def read_song_data():
+    ``` 
+    This function accesses the dataset in order to read in the data and add the columns in the data into a new list called song_objects.
+    
+    Args:
+        This function takes in no arguments.
+    Returns:
+        A list called song_objects that contains cleaned up data (only the necessary columns needed)
+    ```
     song_objects = []
     
     try:
@@ -50,6 +69,14 @@ def read_song_data():
 
 
 def top_hundred_song():
+    ``` 
+    This function sorts all the songs in the dataset by "SongHotness" and writes the top 100 songs into a new csv file called spotifytophundred.csv
+    
+    Args: 
+        The function does read in any arguments.
+    Returns:
+        A new csv file called spotifytophundred.csv that contains the top 100 songs in the dataset.
+    ```
     
     data = read_song_data()
     
@@ -69,5 +96,3 @@ def top_hundred_song():
     except:
         print("Problem writing to the file")
 
-
- 
