@@ -4,7 +4,7 @@
 
 ### Project Task
 
-Our goal for this project is to showcase the Million Song Dataset by finding the top 100 songs of all time and creating data visualizations for it. These classes help us to do so:
+Our goal for this project is to showcase the Million Song Dataset by finding the top 100 songs of all time and creating some data visualizations based on the dataset. These classes help us to do so:
 
 class Song: The class Song is the basis to reading in all of the information in the csv file. This then allows us to sort all of the songs by "SongHotness" with 1 being the highest and 0 being the lowest, printing the top 100 songs out in a csv file.
 
@@ -70,7 +70,11 @@ spotify = spotify[["AlbumName", "ArtistName", "Duration", "KeySignature", "Tempo
 If we call the data_visualizations after this line, we run into an error because the above line transforms `spotify` from a **dataframe** to a **module** (not sure what a module is exactly)
 
 
-In the function read_song_data(), we did "next(f)" which essentially doesn't read the titles of each column in the csv so that our __str__ function would be able to run. As so, this messes up top_hundred_song() as it instead prints the first song into where the title is. Therefore, we add a row with the appropriate headers before the for loop in the code.
+In the function read_song_data(), we wrote the code 
+```
+"next(f)"
+```
+which essentially doesn't read the titles of each column in the csv so that our __str__ function would be able to run. As so, this messes up top_hundred_song() as it instead prints the first song into where the title is. Therefore, we add a row with the appropriate headers before the for loop in the code.
 
 ``` 
 top_hundred_data.writerow(['AlbumName', 'ArtistName', 'Duration', 'KeySignature', 'Tempo', 'TimeSignature', 'Title', 'Year', 'SongHotness'])
