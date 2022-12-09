@@ -54,16 +54,18 @@ def read_song_data():
     Returns:
         A list called song_objects that contains cleaned up data (only the necessary columns needed)
     ```
-    song_objects = []
+    song_objects = [] # declare empty list that gets added to
     
     try:
         with open("msd_cleaned.csv", "r") as f:
-            next(f)
+            next(f) # skips reading the title row
             for line in f.readlines():
                 song_info = line.split(",")
+                # add only desired columns
                 song_objects.append(Song(song_info[3], song_info[5], song_info[6], song_info[7], song_info[8], song_info[9], song_info[10], song_info[11], song_info[12]))                    
         return song_objects
     
+    # when file is invalid
     except: 
         print("File does not exist.")
 
@@ -83,16 +85,19 @@ def top_hundred_song():
     data.sort(key = lambda x: x.song_hotness, reverse = True)
 
     try:
-        with open('spotifytophundred.csv', 'w') as file:
+        with open('spotifytophundred.csv', 'w') as file: # new file
             top_hundred_data = csv.writer(file)
+            # add a title row that was taken out by __str__ function
             top_hundred_data.writerow(['AlbumName', 'ArtistName', 'Duration', 'KeySignature', 'Tempo', 'TimeSignature', 'Title', 'Year', 'SongHotness'])
             
+            # writing the top 100 songs
             for x in range(100):
 
                 top_hundred_data.writerow(data[x].to_list())
 
         return top_hundred_data
-                    
+    
+    # when there's an error writing to the file                
     except:
         print("Problem writing to the file")
 
