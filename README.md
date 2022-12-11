@@ -33,7 +33,7 @@ We imported from data_visualizations.py to get the compare_variables() function.
 
 Here's the visualization that was outputted:
 
-![image](https://github.com/jeannhi/spotify-data-/SongHotness_vs_Year.png?raw=true)
+<img width="1228" alt="SongHotness_vs_Year" src="https://user-images.githubusercontent.com/114253082/206884526-7e79db28-ccf9-4893-b93a-348dce9ad58a.png">
 
 We imported from spotify.py to get the read_song_data() and top_hundred_song() functions. The read_song_data() function was to be able to read in all of the information provided by the Million Song Dataset csv. From there, we were finally able to manipulate the data to the desired way. 
 
