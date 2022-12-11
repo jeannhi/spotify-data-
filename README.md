@@ -6,7 +6,7 @@
 
 Our goal for this project is to showcase the Million Song Dataset by finding the top 100 songs of all time and creating some data visualizations based on the dataset. These classes help us to do so:
 
-class Song: The class Song is the basis to reading in all of the information in the csv file. This then allows us to sort all of the songs by "SongHotness" with 1 being the highest and 0 being the lowest, printing the top 100 songs out in a csv file.
+class Song: The class Song is the basis to reading in all of the information in the csv file. 
 
 class data_visualizations: The class data_visualizations allows for different information about songs like duration, year, etc. to be pulled into an object, where we can call a function to create a graph to visually compare the correlation of things like "Year" and "Duration."
 
@@ -22,7 +22,7 @@ class data_visualizations: The class data_visualizations allows for different in
 
 The csv. file used was used from a previous class and had been pre-cleaned and a subset of 10,000 tracks from the original 1,000,000 track dataset.
 
-### Data Visualizations
+### Data Visualization
 
 The modules that needed to be imported to do this were: 
 1) pandas: to be able to do data analysis manipulations and techniques on the the dataset
