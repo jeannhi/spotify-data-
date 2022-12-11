@@ -8,6 +8,8 @@ Our goal for this project is to showcase the Million Song Dataset by finding the
 
 class Song: The class Song is the basis to reading in all of the information in the csv file. This then allows us to sort all of the songs by "SongHotness" with 1 being the highest and 0 being the lowest, printing the top 100 songs out in a csv file.
 
+class data_visualizations: The class data_visualizations allows for different information about songs like duration, year, etc. to be pulled into an object, where we can call a function to create a graph to visually compare the correlation of things like "Year" and "Duration."
+
 
 ### List of Python packages
 
@@ -26,6 +28,12 @@ The csv. file used was used from a previous class and had been pre-cleaned and a
 The modules that needed to be imported to do this were: 
 1) pandas: to be able to do data analysis manipulations and techniques on the the dataset
 2) csv: to be able to write to and print out a new csv file
+
+We imported from data_visualizations.py to get the compare_variables() function. This function takes a data_visualizations object and uses it to plot a scatter plot. To show that this funciton works as desired, we plotted the song hotness score vs the year, after dropping the songs with empty hotness scores or an unknown year.
+
+Here's the visualization that was outputted:
+
+
 
 We imported from spotify.py to get the read_song_data() and top_hundred_song() functions. The read_song_data() function was to be able to read in all of the information provided by the Million Song Dataset csv. From there, we were finally able to manipulate the data to the desired way. 
 
