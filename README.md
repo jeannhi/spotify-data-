@@ -70,12 +70,11 @@ Link to the Cleaned Data: https://github.com/lindseymardona/msd-exploration/blob
 
 ### IMPORTANT NOTE
 ##### Your demo has to be completely reproducible by people outside of your team. If I follow your code and instructions but can’t reproduce your results, there may be a penalty.
-We might need to address or clarify something about a bug I found in the code:\
-When creating an instantiation of the `data_visualizations` class, we need to have this before the following line in the Jupiter Notebook:
+We need to create instantiations of the `data_visualizations` class before the following line in the Jupiter Notebook:
 ```
 spotify = spotify[["AlbumName", "ArtistName", "Duration", "KeySignature", "Tempo", "TimeSignature", "Title", "Year", "SongHotness"]]
 ```
-If we call the data_visualizations after this line, we run into an error because the above line transforms `spotify` from a **dataframe** to a **module** (not sure what a module is exactly)
+If we call the data_visualizations after this line, we run into an error because the above line transforms `spotify` from a **dataframe** to a **module**
 
 
 In the function read_song_data(), we wrote the code 
